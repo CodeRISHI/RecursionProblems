@@ -1,0 +1,113 @@
+<html>
+<head>
+	<title>Recursion Problems</title>
+
+	<!--BOOTSTRAP & GOOGLE FONT(S)-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather">
+
+    <!--LINK CSS-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body id="body-override">
+	<div id="container">
+		<div id="header">
+			<h1><span id="name"><div class="hvr-bounce-out"><a href="#">Recursion Problems</a></div></span></h1>            
+		</div>
+
+		<form role="form">
+			<div class="form-group">
+				<!-- FACTORIAL -->
+                <div id="factorial">
+					<h3>Factorial</h3>					
+					<input type="text" class="form-control" id="factorial-field" placeholder="Enter a number...">
+					<button type="submit" class="btn btn-success" id="fact-button">Calculate</button>
+					<button type="submit" class="btn btn-danger" id="fact-clear">Clear</button>
+					<pre class="results" id="fact-result"></pre>
+				</div>
+                <!-- GCD -->
+                <div id="gcd">
+                    <h3>GCD</h3>                  
+                    <input type="text" class="form-control" id="gcd-field-one" placeholder="Enter a number...">
+                    <input type="text" class="form-control" id="gcd-field-two" placeholder="Enter another number...">
+                    <button type="submit" class="btn btn-success" id="gcd-button">Calculate</button>
+                    <button type="submit" class="btn btn-danger" id="gcd-clear">Clear</button>
+                    <pre class="results" id="gcd-result"></pre>
+                </div>
+                <!-- RANGE -->
+                <div id="range">
+                    <h3>Range</h3>                  
+                    <input type="text" class="form-control" id="range-field-one" placeholder="Enter a number...">
+                    <input type="text" class="form-control" id="range-field-two" placeholder="Enter another number...">
+                    <button type="submit" class="btn btn-success" id="range-button">Calculate</button>
+                    <button type="submit" class="btn btn-danger" id="range-clear">Clear</button>
+                    <pre class="results" id="range-result"></pre>
+                </div>
+                <!-- SUM -->
+                <div id="sum">
+                    <h3>Array Sum</h3>                  
+                    <input type="text" class="form-control sum-info" id="sum-field" placeholder="Enter a few numbers...">                    
+                    <button type="submit" class="btn btn-success" id="sum-button">Calculate</button>
+                    <button type="submit" class="btn btn-danger" id="sum-clear">Clear</button>
+                    <pre class="results" id="sum-result"></pre>
+                </div>
+                <!-- EXPONENT -->
+                <div id="exponent">
+                    <h3>Exponent</h3>                  
+                    <input type="text" class="form-control sum-info" id="exp-field-base" placeholder="Enter the base...">                    
+                    <input type="text" class="form-control" id="exp-field-exp" placeholder="Enter the exponent...">
+                    <button type="submit" class="btn btn-success" id="exp-button">Calculate</button>
+                    <button type="submit" class="btn btn-danger" id="exp-clear">Clear</button>
+                    <pre class="results" id="exp-result"></pre>
+                </div>
+                <!-- FIBONACCI -->
+                <div id="Fibonacci">
+                    <h3>Fibonacci Series</h3>                  
+                    <input type="text" class="form-control sum-info" id="fibo-field" placeholder="Enter a number...">
+                    <button type="submit" class="btn btn-success" id="fibo-button">Calculate</button>
+                    <button type="submit" class="btn btn-danger" id="fibo-clear">Clear</button>
+                    <pre class="results" id="fibo-result"></pre>
+                </div>
+                <!-- EVENORNOT -->
+                <div id="even-or-not">
+                    <h3>Even Or Not</h3>                  
+                    <input type="text" class="form-control sum-info" id="even-field" placeholder="Enter a number...">
+                    <button type="submit" class="btn btn-success" id="even-button">Calculate</button>
+                    <button type="submit" class="btn btn-danger" id="even-clear">Clear</button>
+                    <pre class="results" id="even-result"></pre>
+                </div>
+                <!-- BINARY SEARCH -->
+                <div id="binary-search">
+                    <h3>Binary Search</h3>                  
+                    <input type="text" class="form-control sum-info" id="binary-field" placeholder="Enter a few numbers...">
+                    <input type="text" class="form-control" id="binary-field-target" placeholder="Enter the target...">
+                    <button type="submit" class="btn btn-success" id="binary-button">Calculate</button>
+                    <button type="submit" class="btn btn-danger" id="binary-clear">Clear</button>
+                    <pre class="results" id="binary-result"></pre>
+                </div>
+                <!-- FACTORIAL ARRAY -->
+                <div id="factorial-array">
+                    <h3>Factorial Array</h3>                  
+                    <input type="text" class="form-control sum-info" id="factorial-array-field" placeholder="Enter a number...">
+                    <button type="submit" class="btn btn-success" id="factorial-array-button">Calculate</button>
+                    <button type="submit" class="btn btn-danger" id="factorial-array-clear">Clear</button>
+                    <pre class="results" id="factorial-array-result"></pre>
+                </div>
+			</div>
+		</form>
+
+        <div class="footer" id="footer">
+            <div id="footer-msg" class="hvr-bounce-out">
+                <span id="footer-title">&copy 2016 Arun Vasudevan | Hack Reactor (HR41)</span>
+            </div>
+        </div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://underscorejs.org/underscore-min.js"></script>
+    <script src="js/recursionproblems.js"></script>    
+
+</body>
+</html>

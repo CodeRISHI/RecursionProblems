@@ -1,0 +1,118 @@
+/*style.css*/
+
+        html, #body-override {
+            background: url('images/bg.png') no-repeat;            
+            background-size: 100% 100%;
+            padding: 0 !important;
+            margin: 0;
+        }
+
+    	#container {
+            background-color: #EDF0F5;
+    		margin-left: 15px;    		
+    		max-width: 960px;
+    		height: auto;
+    		margin: 0 auto !important; /*CENTER CONTAINER*/		
+			overflow: hidden;
+            text-align: center;
+            border: 1px groove #4A4B4C;           
+    	}
+
+        #header {
+            background-color: #319CFF;
+            margin-top: -20px;              
+        }    	
+
+    	h1, h2, h3, h4, h5, h6 {    		
+    		margin-bottom: 10px;
+    		font: 25px 'Merriweather';            
+        }
+
+    	h1 {
+    		font-size: 48px;
+    		font-weight: 600;
+            text-align: center;
+            vertical-align: middle;
+            margin-bottom: 20px;            
+    	}
+
+        #name a {
+            color: #FFF;            
+            text-decoration: none;
+        }        
+
+        /* Bounce Out */
+        .hvr-bounce-out {          
+          vertical-align: middle;
+          -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          -moz-osx-font-smoothing: grayscale;
+          -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+        }
+        .hvr-bounce-out:hover, .hvr-bounce-out:focus, .hvr-bounce-out:active {
+          -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+          -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+          transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+        }
+
+    	#factorial-field, #sum-field, 
+    		#fibo-field, #even-field, #factorial-array-field {
+    		max-width: 400px;
+    		margin: 15px;            
+    		padding: 12px;
+            display: inline-block;
+    	}
+
+         .form-control {
+            max-width: 180px;
+            margin: 15px;
+            padding: 12px;
+            display: inline-block;   
+         }
+
+    	button {
+    		display: inline-block;
+    		margin-left: 15px;
+    		margin-right: 0px;
+    	}
+
+        pre {
+            text-align: center;            
+        }
+
+    	.results {
+    		margin-top: 12px;
+    		margin-left: 90px;    		
+    		max-width: 780px;
+    		font-weight: 600;
+    		font-size: 22px;
+    		text-align: center;            
+    	}
+
+        #factorial, #gcd, #range, #sum,
+            #exponent, #Fibonacci, #even-or-not,
+                #binary-search, #factorial-array {
+            margin: 25px 0px 25px 0px;
+            /*border: 1px groove gray;*/
+        }
+
+        #footer {
+          min-width: 960px;
+          margin: 0 auto -15px -15px;
+          position: relative;
+          padding: 22px;
+          height: 70px;
+          background-color: #319CFF;
+        }
+
+        #footer-msg {
+            vertical-align: middle;
+            color: #FFF;
+            font-size: 18px;
+            font-weight: 600;
+        }
