@@ -15,15 +15,31 @@
 	    };
 
     	//No. 1 - Write a JavaScript program to calculate the factorial of a number.
-    	var factorial = (num) => (num === 0) ? 1 : (num * factorial(num - 1));
+    	var factorial = (num) => {
+            var myNum = parseInt(num);
+
+            if (myNum < 0 || isNaN(myNum)) {
+                return undefined;
+            } else if (myNum === 0) {
+                return 1;
+            } else {
+                return myNum * factorial(myNum - 1);
+            }
+        };
 
         $('#fact-result').hide();
 
     	$('#fact-button').click(function (e) {
     		e.preventDefault();
     		var myVal = $('#factorial-field').val();
-    		var result = commaSeparateNumber(factorial(myVal));
-    		console.log('result ' , result);
+            console.log('myVal ' , myVal);
+            var result = factorial(myVal);
+            if (result >= 1000) {
+                result = commaSeparateNumber(result);
+            } else if (result === undefined) {
+                result = 'undefined';
+            }
+            console.log('result ' , result);
     		var ans = $('#fact-result').append(result).hide();
     		ans.slideDown();
     	});
