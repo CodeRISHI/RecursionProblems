@@ -36,7 +36,7 @@
             var result = factorial(myVal);
             if (result >= 1000) {
                 result = commaSeparateNumber(result);
-            } else if (result === undefined) {
+            } else if (result === undefined ) {
                 result = 'undefined';
             }
             console.log('result ' , result);
@@ -402,4 +402,128 @@
         $('#factorial-array-clear').click(function (event) {
             event.preventDefault();
             location.reload(); //clear both fields          
+        });
+
+        //Reverse
+        var rev = (array) => {
+          var finalArr = [];
+          var result = null;
+          
+          var _rev = (arr) => {
+          console.log('arr ' , arr);
+            if (arr.length === 0) {
+                result = finalArr;
+            } else {
+                finalArr.push(arr.pop());
+                result = _rev(arr);
+            }            
+          };  
+          _rev(array);
+          return finalArr;
+        };
+
+        console.log(rev([1,2,3,4,5]));
+
+        $('#array-revrs-result').hide();
+
+        $('#array-revrs-button').click(function (e) {
+            e.preventDefault();
+
+            var elem = $('#array-revrs-field').val();
+
+            //create array of values
+            var tempArr = [];
+            if (_.contains(elem.split(''), ',')) {
+                tempArr = elem.split(',');
+            } else if (_.contains(elem.split(''), ' ')) {
+                tempArr = elem.split(' ');
+            } else {
+                tempArr = elem.split('');
+            }
+
+            _.each(tempArr, (el, ind) => {
+                tempArr[ind] = +tempArr[ind]; //convert to integers                
+            });
+
+            console.log('tempArr ' , tempArr);
+            
+            var result = rev(tempArr);
+            console.log('result ' , result);
+            var ans = $('#array-revrs-result').append('[ ' + result + ' ]').hide();
+            ans.slideDown();
+        });
+
+        $('#array-revrs-clear').click(function (event) {
+            event.preventDefault();
+            location.reload(); //clear both fields          
+        });
+
+        //Recursive Average
+        var recAvg = (array) => {
+          var result = null;
+          var divisor = array.length;
+          var tempArr = [];
+          
+          var _recAvg = (arr) => {            
+            var ans = null;           
+
+            if (arr.length === 1) {
+                ans = arr[0];                
+            } else {
+                ans = arr.pop() + _recAvg(arr);                                
+            }                    
+            return ans;            
+          };            
+
+          _.each(array, (el) => {
+            if (Array.isArray(el)) {
+                var divTwo = el.length;
+                tempArr.push(parseInt(_recAvg(el) / divTwo));
+            } else {
+                tempArr.push(el);               
+            }
+          });
+
+          console.log('tempArr ' , tempArr);
+
+          result = parseFloat(_recAvg(tempArr) / divisor).toFixed(2);                    
+          return result;
+        };
+
+        console.log(recAvg([1,2,3]));
+        console.log(recAvg([1,2,[2,4]]));
+
+        $('#array-avg-result').hide();
+
+        $('#array-avg-button').click(function (e) {
+            e.preventDefault();
+
+            var elem = $('#array-avg-field').val();
+            console.log('elem ' , elem, Array.isArray(elem));
+
+            //create array of values
+            var tempArr = [];
+            var elemArr = elem.split('');
+            console.log('elemArr ' , elemArr);
+            elemArr.shift();
+            elemArr.pop();
+            console.log('elemArr ' , elemArr);
+            if (_.contains(elem.split(''), ',')) {
+                tempArr = elem.split(',');
+            } else if (_.contains(elem.split(''), ' ')) {
+                tempArr = elem.split(' ');
+            } else {
+                tempArr = elem.split('');
+            }
+
+            _.each(tempArr, (el, ind) => {
+                tempArr[ind] = +tempArr[ind]; //convert to integers                
+            });
+
+            console.log('tempArr ' , tempArr);
+            
+            var result = recAvg(tempArr);
+            console.log('result ' , result);
+            var ans = $('#array-avg-result').append(result).hide();
+            ans.slideDown();
         });
