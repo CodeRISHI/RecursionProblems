@@ -1,21 +1,21 @@
 /*style.css*/
 
-        html, #body-override {
-            background: url('images/bg.png') no-repeat;            
-            background-size: 100% 100%;
-            padding: 0 !important;
-            margin: 0;
-        }
+      html, #body-override {
+        background: url('images/bg.png') no-repeat;            
+        background-size: 100% 100%;
+        padding: 0 !important;
+        margin: 0;
+      }
 
     	#container {
-            background-color: #EDF0F5;
+        background-color: #EDF0F5;
     		margin-left: 15px;    		
     		max-width: 960px;
     		height: auto;
     		margin: 0 auto !important; /*CENTER CONTAINER*/		
-			overflow: hidden;
-            text-align: center;
-            border: 1px groove #4A4B4C;           
+			  overflow: hidden;
+        text-align: center;
+        border: 1px groove #4A4B4C;           
     	}
 
         #header {
@@ -61,19 +61,20 @@
         }
 
     	#factorial-field, #sum-field, 
-    		#fibo-field, #even-field, #factorial-array-field {
+    		#fibo-field, #even-field, #factorial-array-field, #array-revrs-field,
+            #array-avg-field {
     		max-width: 400px;
     		margin: 15px;            
     		padding: 12px;
-            display: inline-block;
+        display: inline-block;
     	}
 
-         .form-control {
-            max-width: 180px;
-            margin: 15px;
-            padding: 12px;
-            display: inline-block;   
-         }
+     .form-control {
+        max-width: 180px;
+        margin: 15px;
+        padding: 12px;
+        display: inline-block;   
+     }
 
     	button {
     		display: inline-block;
@@ -81,9 +82,9 @@
     		margin-right: 0px;
     	}
 
-        pre {
-            text-align: center;            
-        }
+      pre {
+          text-align: center;            
+      }
 
     	.results {
     		margin-top: 12px;
@@ -111,8 +112,8 @@
         }
 
         #footer-msg {
-            vertical-align: middle;
-            color: #FFF;
-            font-size: 18px;
-            font-weight: 600;
+          vertical-align: middle;
+          color: #FFF;
+          font-size: 18px;
+          font-weight: 600;
         }
